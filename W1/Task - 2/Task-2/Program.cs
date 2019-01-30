@@ -21,7 +21,7 @@ namespace Task_2
         this.id = id;
         this.year = year;
         }
-        // created public method, to print info about the student
+        // created public method, which prints info about the student
         public void Print()
         {
             Console.WriteLine(name + " " + id + " " + year);
@@ -31,19 +31,22 @@ namespace Task_2
     {
         static void Main(string[] args)
         {
-            // created name, which operator input
+            // declared string (name), which operator inputs
             string name = Console.ReadLine();
-            // created id, which operator input
+            // declared string (id), which operator inputs
             string id = Console.ReadLine();
-            // created int year, which converts to int 
+            // declared int (year), which converts to int from string
             int year = int.Parse(Console.ReadLine());
-            
+            // created a loop, which increment year
             for (int i = 0; i < 4; i++)
             {
+                // created a value for class Student and created a new person using method Student
                 Student a = new Student(name, id, year);
                 year++;
+                // call method Print, which will write student "a" info
                 a.Print();
             }
+            // created for cmd, will close after click any key (cmd)
             Console.ReadKey();
         }
     }
