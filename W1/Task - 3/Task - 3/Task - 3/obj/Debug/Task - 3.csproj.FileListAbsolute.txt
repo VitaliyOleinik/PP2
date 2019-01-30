@@ -1,7 +1,0 @@
-C:\Work\PP2\PP2\W1\Task - 3\Task - 3\Task - 3\bin\Debug\Task - 3.exe.config
-C:\Work\PP2\PP2\W1\Task - 3\Task - 3\Task - 3\bin\Debug\Task - 3.exe
-C:\Work\PP2\PP2\W1\Task - 3\Task - 3\Task - 3\bin\Debug\Task - 3.pdb
-C:\Work\PP2\PP2\W1\Task - 3\Task - 3\Task - 3\obj\Debug\Task - 3.csprojAssemblyReference.cache
-C:\Work\PP2\PP2\W1\Task - 3\Task - 3\Task - 3\obj\Debug\Task - 3.csproj.CoreCompileInputs.cache
-C:\Work\PP2\PP2\W1\Task - 3\Task - 3\Task - 3\obj\Debug\Task - 3.exe
-C:\Work\PP2\PP2\W1\Task - 3\Task - 3\Task - 3\obj\Debug\Task - 3.pdb

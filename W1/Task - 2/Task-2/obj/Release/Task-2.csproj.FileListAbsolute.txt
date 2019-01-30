@@ -1,6 +1,0 @@
-C:\Work\PP2\PP2\W1\Task - 2\Task-2\bin\Release\Task-2.exe.config
-C:\Work\PP2\PP2\W1\Task - 2\Task-2\bin\Release\Task-2.exe
-C:\Work\PP2\PP2\W1\Task - 2\Task-2\bin\Release\Task-2.pdb
-C:\Work\PP2\PP2\W1\Task - 2\Task-2\obj\Release\Task-2.csproj.CoreCompileInputs.cache
-C:\Work\PP2\PP2\W1\Task - 2\Task-2\obj\Release\Task-2.exe
-C:\Work\PP2\PP2\W1\Task - 2\Task-2\obj\Release\Task-2.pdb
