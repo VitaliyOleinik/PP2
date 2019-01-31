@@ -42,6 +42,24 @@ namespace Task_2
             {
                 // created a value for class Student and created a new person using method Student
                 Student a = new Student(name, id, year);
+                // checked year of studing
+                if (year <= 0)
+                {
+                    // output Error
+                    Console.WriteLine("Error");
+                    // created for cmd, will close after click any key (cmd)
+                    Console.ReadKey();
+                    // exit from the loop
+                    return;
+                }
+                // checked year of studing
+                if (year >= 5)
+                {
+                    // created for cmd, will close after click any key (cmd)
+                    Console.ReadKey();
+                    // exit from the loop
+                    return;
+                }
                 year++;
                 // call method Print, which will write student "a" info
                 a.Print();
