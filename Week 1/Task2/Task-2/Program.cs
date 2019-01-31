@@ -27,6 +27,7 @@ namespace Task_2
             Console.WriteLine(name + " " + id + " " + year);
         }
     }
+
     class Program
     {
         static void Main(string[] args)
