@@ -4,26 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task___3
+namespace Task_3
 {
     class Program
     {
+        // creat the method
+        static void CopyVar(int n)
+        {
+            // creat string of array and input string of array without " "
+            string[] arr = Console.ReadLine().Split();
+            // creat string of array with double lenght of first array
+            string[] copy = new string[(arr.Length * 2)];
+            // creat a new val
+            int a = 0;
+            // creat a loop
+            for(int i = 0; i < n; i++)
+            {
+                // copying ex. (copy[0] = arr[0])
+                copy[a++] = arr[i];
+                // copying ex. (copy[1] = arr[0])
+                copy[a++] = arr[i];
+            }
+            // creat a loop of output the array
+            for (int i = 0; i < copy.Length; i++)
+            {
+                // convert from string to int and out the array
+                Console.Write(int.Parse(copy[i]));
+            }
+            
+            
+
+        } 
         static void Main(string[] args)
         {
-            // created new var(int) and converted it to int from string
+            // creat a new value and input it
             int n = int.Parse(Console.ReadLine());
-            // created string s
-            string s = Console.ReadLine();
-            // created array of string s, without " "
-            string[] arr = s.Split();
-            // created a loop, which outputs values of array
-            for (int i = 0; i < n; i++)
-            {
-                // outputs a variable two times
-                Console.Write("{0} {0} ", arr[i]);
-            }
-            // created for cmd, will close after click any key (cmd)
-            Console.ReadKey();
+            // use the method to "CopyVar"
+            CopyVar(n);
+          
         }
     }
 }
