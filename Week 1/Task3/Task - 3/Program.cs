@@ -20,10 +20,11 @@ namespace Task_3
             // creat a loop
             for(int i = 0; i < n; i++)
             {
-                // copying ex. (copy[0] = arr[0])
+                // copying ex. (copy[0] = arr[0]) -> inc a
                 copy[a++] = arr[i];
-                // copying ex. (copy[1] = arr[0])
+                // copying ex. (copy[1] = arr[0]) -> inc a
                 copy[a++] = arr[i];
+                
             }
             // creat a loop of output the array
             for (int i = 0; i < copy.Length; i++)
