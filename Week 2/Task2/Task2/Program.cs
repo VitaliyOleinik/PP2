@@ -9,7 +9,7 @@ namespace Task2
 {
     class Program
     {
-        // created public void method(bool), which returns true || false statements
+        // created public method(bool), which returns true || false statements
         public static bool Pr(int n)
         {
             // created a loop for chech numbers of array on prime numbers
@@ -23,39 +23,53 @@ namespace Task2
             // else 1
             return true;
         }
+        // crated public method(string)
+        public static string Ans(string s)
+        {
+            // created empty string
+            string res = "";
+            // created an array of sting without " "
+            string[] arr = s.Split();
+            // check our array of string on Prime numbers
+            foreach (var a in arr)
+            {
+                // created temparary value and parse it to int from string
+                int temp = int.Parse(a);
+                // checking on prime numbers
+                if (Pr(temp))
+                {
+                    // res is equal res and temp value
+                    res = res + " " + temp;
+                }
+            }
+            // cut the first " " and last
+            return res.Trim();
+        }
 
         static void Main(string[] args)
         {
+            // selected the way to .txt
             FileStream fileStream = new FileStream(@"C:\Work\PP2\PP2\Week 2\Task2\Task2\bin\Debug\input.txt", FileMode.Open, FileAccess.Read);
+            // reading the file
             StreamReader sr = new StreamReader(fileStream);
-            String line = sr.ReadLine();
-            String[] stringNumbers = line.Split();
-            int[] arr = new int[stringNumbers.Length];
-            for (int i = 0; i < stringNumbers.Length; ++i)
-            {
-                arr[i] = int.Parse(stringNumbers[i]);
-            }
-            sr.Close();
-
+            // created and equaling the line to file
+            string line = sr.ReadLine();
+            // close the way
             fileStream.Close();
-            FileStream fs = new FileStream(@"C:\Work\PP2\PP2\Week 2\Task2\Task2\bin\Debug\output.txt", FileMode.Create, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(fs);
-            
-            
-            for (int i = 0; i < arr.Length; i++)
-            {
-                // call method
-                if (Pr(arr[i]))
-                {
-                    if (arr[i] != 1)
-                    {
-                        sw.Write(i + " ");
-                    }
-                }
-            }
+            // close reading of file
             sr.Close();
-
-            fileStream.Close();
+            // created a value and equaled it to method with line value
+            string result = Ans(line);
+            // selected the way to .txt
+            FileStream fileStream1 = new FileStream(@"C:\Work\PP2\PP2\Week 2\Task2\Task2\bin\Debug\output.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            // writing into the file
+            StreamWriter sw = new StreamWriter(fileStream1);
+            // calling sw and write the our result to this .txt
+            sw.WriteLine(result);
+            // close sw
+            sw.Close();
+            // close fs
+            fileStream1.Close();
             Console.ReadKey();
         }
     }
