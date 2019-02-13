@@ -7,18 +7,27 @@ using System.IO;
 
 namespace Task1
 {
+    // created class FarManager 
     class FarManager
     {
+        // created public value cursor
         public int cursor;
+        // created public value size
         public int size;
+        // created boolean value/ which return 1 or 2
         bool ok;
+        // created method FarManager
         public FarManager()
         {
+            // where cursor is equal 0, because it's startpoint from 0 to ..
             cursor = 0;
+            // ok is true value
             ok = true;
         }
+        // created method Color wit values (FSInfo and index)
         public void Color(FileSystemInfo fs, int index)
         {
+            // if 
             if (cursor == index)
             {
                 Console.BackgroundColor = ConsoleColor.Red;

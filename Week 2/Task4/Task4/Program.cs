@@ -14,7 +14,7 @@ namespace Task4
         static void Main(string[] args)
         {
             // created||open a file "Path.txt" with FileStream
-            FileStream fs = new FileStream(@"C:\Work\PP2\PP2\Week 2\Task4\Path.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            FileStream fs = new FileStream(@"C:\Work\PP2\PP2\Week 2\Task4\Path\ded.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             // created function to write info to fs
             StreamWriter wr = new StreamWriter(fs);
             // created string
@@ -26,9 +26,9 @@ namespace Task4
             // close stream FileStream
             fs.Close();
             // copying from Path.txt to Path1.txt
-            File.Copy(@"C:\Work\PP2\PP2\Week 2\Task4\Path.txt", @"C:\Work\PP2\PP2\Week 2\Task4\Path1.txt");
+            File.Copy(@"C:\Work\PP2\PP2\Week 2\Task4\Path\ded.txt", @"C:\Work\PP2\PP2\Week 2\Task4\Path1\ded.txt");
             // deleting Path.txt
-            File.Delete(@"C:\Work\PP2\PP2\Week 2\Task4\Path.txt");
+            File.Delete(@"C:\Work\PP2\PP2\Week 2\Task4\Path\ded.txt");
         }
     }
 }
