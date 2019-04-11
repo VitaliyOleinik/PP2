@@ -51,6 +51,7 @@ namespace Task1
             }
 
         }
+        
         // created method Show for showing files
         public void Show(string path)
         {
@@ -58,6 +59,7 @@ namespace Task1
             DirectoryInfo directory = new DirectoryInfo(path);
             // created an array of folders and files
             FileSystemInfo[] fileSystemInfos = directory.GetFileSystemInfos();
+            // DirectoryInfo[] direct = new DirectoryInfo(path);
             // size is equal length
             size = fileSystemInfos.Length;
             // created new value index
@@ -65,7 +67,10 @@ namespace Task1
             // a loop conteins folders and files
             foreach(FileSystemInfo fs in fileSystemInfos)
             {
-                
+                /*if (fileSystemInfos[fs].GetType() = typeof(DirectoryInfo))
+                {
+                    Console.WriteLine(fileSystemInfos[fs].Name + "(" fileSystemInfos[fs].GetFileSystemInfos().Length + ")");
+                }*/
                 // called method Color (fs, index)
                 Color(fs, index);
                 // output fs name
@@ -94,6 +99,7 @@ namespace Task1
                 // cursor is equal size of contain - 1
                 cursor = size - 1;
         }
+
         // void method Start
         public void Start(string path)
         {
@@ -115,6 +121,25 @@ namespace Task1
                 // readkey
                 consoleKey = Console.ReadKey();
                 // if consolekey is equal backspace 
+                if(consoleKey.Key == ConsoleKey.Delete)
+                {
+                    // created value
+                    int a = 0;
+                    // creat a loop of directory array
+                    for(int i = 0; i < directory.GetFileSystemInfos().Length; i++)
+                    {
+                        // Ex(1 == 1) input to the if
+                        if(cursor == a)
+                        {
+                            // search file and delete it
+                            directory.GetFileSystemInfos()[i].Delete();
+                            // exit from loop
+                            break;
+                        }
+                        // a + 1
+                        a++;
+                    }
+                }
                 if (consoleKey.Key == ConsoleKey.Backspace)
                 {
                     // cursor is equal 0
@@ -135,14 +160,14 @@ namespace Task1
                 // if console key enter
                 if (consoleKey.Key == ConsoleKey.Enter)
                 {
-                    // created k
+                    // created new val k
                     int k = 0;
                     // a loop for checking files
                     for (int i = 0; i < directory.GetFileSystemInfos().Length; i++)
                     {
-                        
                         if (cursor == k)
                         {
+                            // fs is equal gettypeinfos
                             fs = directory.GetFileSystemInfos()[i];
                             break;
                         }

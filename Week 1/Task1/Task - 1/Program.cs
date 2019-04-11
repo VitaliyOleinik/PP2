@@ -8,7 +8,7 @@ namespace Task___1
 {
     class Program
     {
-        // created public void method(bool), which returns true || false statements
+        // created public method(bool), which returns true || false statements
         public static bool Pr(int n)
         {
             // created a loop for chech numbers of array on prime numbers

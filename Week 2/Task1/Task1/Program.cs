@@ -17,11 +17,11 @@ namespace Task1
             {
                 // check if s[i] is equal to s[j]
                 if (s[i] == s[j])
-                    // return 1 if it is equal
-                    return true;
+                    // return 0 if it is equal
+                    return false;
             }
-            // return 0 if it is not equal
-            return false;
+            // return 1 if it is not equal
+            return true;
         }
 
         static void Main(string[] args)

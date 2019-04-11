@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -310,8 +312,9 @@
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(74, 23);
             this.button24.TabIndex = 25;
-            this.button24.Text = "M+";
+            this.button24.Text = "Save";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
@@ -319,7 +322,7 @@
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(74, 23);
             this.button25.TabIndex = 26;
-            this.button25.Text = "M-";
+            this.button25.Text = "Load";
             this.button25.UseVisualStyleBackColor = true;
             // 
             // button26
@@ -328,8 +331,13 @@
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(74, 23);
             this.button26.TabIndex = 27;
-            this.button26.Text = "MS";
+            this.button26.Text = "Delete";
             this.button26.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -403,6 +411,7 @@
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

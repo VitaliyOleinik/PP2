@@ -7,9 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Calculator
 {
+    [Serializable]
     public partial class Form1 : Form
     {
         enum calc
@@ -120,13 +123,38 @@ namespace Calculator
             calcool = calc.dived;
             label1.Text = "/";
         }
-
-        private void button18_Click(object sender, EventArgs e)
+        int interval = 0; // timer
+        // Clearing
+        public void Clear()
         {
-            Calculate();
+            textBox1.Text = "";
             label1.Text = "";
         }
-
+        // timer
+        public void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            interval++;
+            if (interval == 4)
+                Clear();
+        } 
+        // equal to =
+        private void button18_Click(object sender, EventArgs e)
+        {
+            
+            if (textBox1.Text != "" || label1.Text != "")
+            {
+                // call a method
+                Calculate();
+                label1.Text = "";
+            }
+            else
+            {
+                timer1_Tick(sender, e);
+                textBox1.Text = "Please write a and b or select the function!";
+            }
+        }
+        // created a method
         private void Calculate()
         {
             switch (calcool)
@@ -222,6 +250,7 @@ namespace Calculator
 
         public int fuctorial(int n)
         {
+
             if (n == 1 || n == 0)
                 return 1;
             else
@@ -235,10 +264,24 @@ namespace Calculator
             else
             {
                 fuc = int.Parse(textBox1.Text);
-                calcool = calc.fuct;
-                label1.Text = "!";
+                if (fuc > 15)
+                {
+                    textBox1.Text = "04ень много! меньше 15 вводи!";
+                    timer1_Tick(sender, e);
+                }
+                else
+                {
+                    calcool = calc.fuct;
+                    label1.Text = "!";
+                }
             }
         }
+        
+        private void button24_Click(object sender, EventArgs e)
+        {
+        
+        }
+        
 
 
         // click .
