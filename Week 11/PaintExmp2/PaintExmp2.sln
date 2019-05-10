@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintExmp2", "PaintExmp2\PaintExmp2.csproj", "{0302AE4F-B727-45C9-AAF2-D9B2C03F00E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exmple2", "Exmple2\Exmple2.csproj", "{6EA09A9D-22F3-4573-9EB5-154B56D24F08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0302AE4F-B727-45C9-AAF2-D9B2C03F00E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0302AE4F-B727-45C9-AAF2-D9B2C03F00E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0302AE4F-B727-45C9-AAF2-D9B2C03F00E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0302AE4F-B727-45C9-AAF2-D9B2C03F00E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA09A9D-22F3-4573-9EB5-154B56D24F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA09A9D-22F3-4573-9EB5-154B56D24F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA09A9D-22F3-4573-9EB5-154B56D24F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA09A9D-22F3-4573-9EB5-154B56D24F08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B95B121-6E6B-4AC4-A6E2-D8C7E2AA7C3F}
+	EndGlobalSection
+EndGlobal

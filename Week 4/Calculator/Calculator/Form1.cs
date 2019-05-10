@@ -24,7 +24,8 @@ namespace Calculator
              divisionWithRem = 5,
              sqrt = 6,
              power = 7,
-             fuct = 8
+             fuct = 8,
+             binary
         }
         float a, b;
         double c;
@@ -188,9 +189,43 @@ namespace Calculator
                     a = fuctorial(fuc);
                     textBox1.Text = a.ToString();
                     break;
+                case calc.binary:
+                    convertToBinary(a);
+                    /*string binary = "";
+                    do
+                    {
+                        binary = (a % 2) + binary;
+                        a /= 2;
+                    }
+                    while (a >= 1);
+                    if(a == 1)
+                    textBox1.Text = 1 + binary;
+                    else
+                        textBox1.Text = binary;
+                        */
+                    break;
             }
         }
 
+        public void convertToBinary(float n)
+        {
+            Stack<float> stack = new Stack<float>();
+            stack.Push(n);
+            // step 1 : Push the element on the stack
+            while (n > 1)
+            {
+                n = n / 2;
+                stack.Push(n);
+            }
+
+            string s;
+            // step 2 : Pop the element and print the value
+            foreach (var val in stack)
+            {
+                s = (val % 2).ToString();
+            }
+                textBox1.Text = ;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -276,12 +311,43 @@ namespace Calculator
                 }
             }
         }
-        
+        public float save_num;
         private void button24_Click(object sender, EventArgs e)
         {
-        
+            if (textBox1.Text != "")
+            {
+                save_num = float.Parse(textBox1.Text);
+                MessageBox.Show("Success");
+                textBox1.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("write the num and press again");
+            }
         }
-        
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            if (save_num != null)
+            {
+                textBox1.Text = save_num.ToString();
+            }
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            save_num = 0;
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            a = int.Parse(textBox1.Text);
+            label1.Text = "Binary";
+            calcool = calc.binary;
+        }
+
+
+
 
 
         // click .
